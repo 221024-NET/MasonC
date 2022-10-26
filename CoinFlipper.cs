@@ -3,8 +3,11 @@ using System;
 public class Program
 {
 	// Fields
+	public int test = 0;
+	
 	// Constructor
 	// Methods
+	//[access modifier] [modifier] [return type] [method name] ([parameters])
 	public static void Main()
 	{
 		Console.WriteLine("Starting Coin Flipper:");
@@ -17,6 +20,10 @@ public class Program
 		try
 		{
 			Num = Int32.Parse(UserNumber);
+			if ( Num <= 0 )
+			{
+				throw new Exception("Argument may not be negative");
+			}
 		}
 		catch( InvalidOperationException e )
 		{
@@ -26,27 +33,35 @@ public class Program
 		{
 			Console.WriteLine(e.Message);
 		}
-		catch
+		catch( Exception e )
 		{
-			Console.WriteLine("The least specific catch");
+			Console.WriteLine("The least specific catch: " + e.Message);
 		}
 		
-		
-		
+		Flip(Num);
+	}
+	
+	//[access modifier] [modifier] [return type] [method name] ([parameters])
+	public static void Flip(int Num)
+	{
 		var rand = new Random();
 		
 		for (int i = 0; i < Num; i++)
 		{
 			int coin = rand.Next(2);
-
-			if (coin == 0)
-			{
-				Console.WriteLine("Heads");	
-			}
-			else
-			{
-				Console.WriteLine("Tails");
-			}
+			HoT(coin);
+		}
+	}
+	
+	public static void HoT(int coin)
+	{
+		if (coin == 0)
+		{
+			Console.WriteLine("Heads");	
+		}
+		else
+		{
+			Console.WriteLine("Tails");
 		}
 	}
 }
