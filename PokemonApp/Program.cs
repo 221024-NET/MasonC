@@ -34,7 +34,7 @@ namespace Program{
             charizard.Evolve("Charmeleon", 5, "Fire", 70, "Blaze");
             Console.WriteLine(charmander.Battle(charizard));
             Console.WriteLine(charizard.ToString());
-            charizard.Evolve("Charizard", 6, "Fire and Flying", 150, "Blaze");
+            charizard.Evolve("", 0, "");
             Console.WriteLine(charmander.Battle(charizard));
             
             Console.WriteLine(charizard.ToString());

@@ -53,8 +53,7 @@ namespace PokemonApp{
             return this.name + " " + this.DexNumber + " " + this.type + " " + this.health + " " + this.ability + " " + isFinalEvol;
         }
 
-        public void Evolve(string PokemonName = "Null", int PokemonNum = 999999, string PokemonType = "Null", 
-            int PokemonHealth = 999999, string PokemonAbility = "Null"){
+        public void Evolve(string PokemonName = "Null", int PokemonNum = 999999, string PokemonType = "Null", int PokemonHealth = 999999, string PokemonAbility = "Null"){
             
             //Evolves a pokemon to a higher level.
             //Sets all of the params to new states.
