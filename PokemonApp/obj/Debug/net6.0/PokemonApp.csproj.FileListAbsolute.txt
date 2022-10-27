@@ -1,0 +1,15 @@
+C:\Users\mpcat\RevatureTraining\MasonC\PokemonApp\bin\Debug\net6.0\PokemonApp.exe
+C:\Users\mpcat\RevatureTraining\MasonC\PokemonApp\bin\Debug\net6.0\PokemonApp.deps.json
+C:\Users\mpcat\RevatureTraining\MasonC\PokemonApp\bin\Debug\net6.0\PokemonApp.runtimeconfig.json
+C:\Users\mpcat\RevatureTraining\MasonC\PokemonApp\bin\Debug\net6.0\PokemonApp.dll
+C:\Users\mpcat\RevatureTraining\MasonC\PokemonApp\bin\Debug\net6.0\PokemonApp.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\PokemonApp\obj\Debug\net6.0\PokemonApp.csproj.AssemblyReference.cache
+C:\Users\mpcat\RevatureTraining\MasonC\PokemonApp\obj\Debug\net6.0\PokemonApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mpcat\RevatureTraining\MasonC\PokemonApp\obj\Debug\net6.0\PokemonApp.AssemblyInfoInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\PokemonApp\obj\Debug\net6.0\PokemonApp.AssemblyInfo.cs
+C:\Users\mpcat\RevatureTraining\MasonC\PokemonApp\obj\Debug\net6.0\PokemonApp.csproj.CoreCompileInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\PokemonApp\obj\Debug\net6.0\PokemonApp.dll
+C:\Users\mpcat\RevatureTraining\MasonC\PokemonApp\obj\Debug\net6.0\refint\PokemonApp.dll
+C:\Users\mpcat\RevatureTraining\MasonC\PokemonApp\obj\Debug\net6.0\PokemonApp.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\PokemonApp\obj\Debug\net6.0\PokemonApp.genruntimeconfig.cache
+C:\Users\mpcat\RevatureTraining\MasonC\PokemonApp\obj\Debug\net6.0\ref\PokemonApp.dll
