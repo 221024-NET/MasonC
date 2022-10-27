@@ -10,6 +10,29 @@ public class Program
 	//[access modifier] [modifier] [return type] [method name] ([parameters])
 	public static void Main()
 	{
+		bool loop = true;
+		while(loop)
+		{
+			CoinFlipper(); // models the ENTIRE behavior
+			
+			Console.WriteLine("Would you like to flip more coins?");
+			Console.WriteLine("Enter 'y' or 'Y' to run again, or anything else to exit:");
+			string playAgain = Console.ReadLine().ToUpper();
+
+			if( playAgain.Equals("Y"))
+			{
+				loop = true;
+			}
+			else
+			{
+				loop = false;
+			}
+
+		}
+	}
+
+	public static void CoinFlipper()
+	{
 		Console.WriteLine("Starting Coin Flipper:");
 		
 		Console.WriteLine("Enter the number of coins to flip: ");
