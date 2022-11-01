@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>HotAndCold</id>
+    <version>1.0.0</version>
+    <authors>HotAndCold</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Figgle" version="0.4.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\bin\Debug\net6.0\HotAndCold.runtimeconfig.json" target="lib\net6.0\HotAndCold.runtimeconfig.json" />
+    <file src="C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\bin\Debug\net6.0\HotAndCold.dll" target="lib\net6.0\HotAndCold.dll" />
+  </files>
+</package>

@@ -1,0 +1,6 @@
+C:\Users\mpcat\Test Publish\HotAndCold.exe
+C:\Users\mpcat\Test Publish\HotAndCold.dll
+C:\Users\mpcat\Test Publish\HotAndCold.deps.json
+C:\Users\mpcat\Test Publish\HotAndCold.runtimeconfig.json
+C:\Users\mpcat\Test Publish\HotAndCold.pdb
+C:\Users\mpcat\Test Publish\Figgle.dll

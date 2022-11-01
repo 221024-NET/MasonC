@@ -1,0 +1,17 @@
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\bin\Release\net6.0\HotAndCold.exe
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\bin\Release\net6.0\HotAndCold.deps.json
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\bin\Release\net6.0\HotAndCold.runtimeconfig.json
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\bin\Release\net6.0\HotAndCold.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\bin\Release\net6.0\HotAndCold.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\bin\Release\net6.0\Figgle.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\obj\Release\net6.0\HotAndCold.csproj.AssemblyReference.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\obj\Release\net6.0\HotAndCold.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\obj\Release\net6.0\HotAndCold.AssemblyInfoInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\obj\Release\net6.0\HotAndCold.AssemblyInfo.cs
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\obj\Release\net6.0\HotAndCold.csproj.CoreCompileInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\obj\Release\net6.0\HotAndCold.csproj.CopyComplete
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\obj\Release\net6.0\HotAndCold.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\obj\Release\net6.0\refint\HotAndCold.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\obj\Release\net6.0\HotAndCold.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\obj\Release\net6.0\HotAndCold.genruntimeconfig.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Combine\HotAndCold\obj\Release\net6.0\ref\HotAndCold.dll
