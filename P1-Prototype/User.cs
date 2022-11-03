@@ -1,20 +1,19 @@
 using System;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+using System.IO;
 
 namespace TicketingSystem{
     public class User{
         string permLVL; //Permission level admin has admin privilage else it will be user
         int id;
-        public string email {get; set;}
-        public string password {get; set;}
+        public string email { get; set; }
+        public string Password {get; set;}
         public List<string> tickets = new List<string>();
 
         public User(){
-            permLVL = "User";
+            permLVL = "Admin";
             id = 999999;
             email = "admin";
-            password = "admin";
+            Password = "admin";
             tickets.Add("999999");
         }
 
@@ -22,7 +21,7 @@ namespace TicketingSystem{
             this.permLVL = permLVL;
             this.id = id;
             this.email = email;
-            this.password = password;
+            Password = password;
             tickets.Add(ticketID);
         }
 
@@ -30,7 +29,7 @@ namespace TicketingSystem{
             permLVL = "User";
             this.id = id;
             this.email = email;
-            this.password = password;
+            Password = password;
         }
     
     }

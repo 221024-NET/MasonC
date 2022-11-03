@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.IO;
 
 namespace TicketingSystem{
@@ -17,7 +15,7 @@ namespace TicketingSystem{
             int num = 0;
             string entry = Console.ReadLine();
             bool loop = Int32.TryParse(entry, out num);
-            Console.WriteLine(use.email + " " + users[use.password]);
+            Console.WriteLine(use.email + " " + users[use.Password]);
             while(!loop || num < 1 || num > 2){
                 Console.WriteLine("\nIncorrect Entry.\nPlease Try Again.\n");
                 Console.WriteLine("Please select the number of the option you would like.");

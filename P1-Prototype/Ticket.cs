@@ -7,7 +7,7 @@ namespace TicketingSystem{
         public int userId;
         public int ticketNum;
         public double amount;
-        public string description;
+        public string description = "";
 
 
     }

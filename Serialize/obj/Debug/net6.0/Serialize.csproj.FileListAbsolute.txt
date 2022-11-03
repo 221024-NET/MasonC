@@ -1,0 +1,15 @@
+C:\Users\mpcat\RevatureTraining\MasonC\Serialize\obj\Debug\net6.0\Serialize.csproj.AssemblyReference.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Serialize\obj\Debug\net6.0\Serialize.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mpcat\RevatureTraining\MasonC\Serialize\obj\Debug\net6.0\Serialize.AssemblyInfoInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Serialize\obj\Debug\net6.0\Serialize.AssemblyInfo.cs
+C:\Users\mpcat\RevatureTraining\MasonC\Serialize\obj\Debug\net6.0\Serialize.csproj.CoreCompileInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Serialize\bin\Debug\net6.0\Serialize.exe
+C:\Users\mpcat\RevatureTraining\MasonC\Serialize\bin\Debug\net6.0\Serialize.deps.json
+C:\Users\mpcat\RevatureTraining\MasonC\Serialize\bin\Debug\net6.0\Serialize.runtimeconfig.json
+C:\Users\mpcat\RevatureTraining\MasonC\Serialize\bin\Debug\net6.0\Serialize.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Serialize\bin\Debug\net6.0\Serialize.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\Serialize\obj\Debug\net6.0\Serialize.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Serialize\obj\Debug\net6.0\refint\Serialize.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Serialize\obj\Debug\net6.0\Serialize.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\Serialize\obj\Debug\net6.0\Serialize.genruntimeconfig.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Serialize\obj\Debug\net6.0\ref\Serialize.dll
