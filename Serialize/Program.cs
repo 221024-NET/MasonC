@@ -14,11 +14,12 @@ namespace serial{
         public static SerialData DeSerializeNow(string path) {
             string jsonStr = File.ReadAllText(path);
             SerialData s = JsonSerializer.Deserialize<SerialData>(jsonStr);
+            if(s == null) s = new SerialData();
             return s;
         }
         public static void Main(string[] args) {
             SerialData s = new SerialData();
-            string path = "./.data.dat";
+            string path = "./.data";
             Console.WriteLine("Attempting to serialize data......");
             SerializeNow(path, s);
             Console.WriteLine("Data has been successfully serialized!");
