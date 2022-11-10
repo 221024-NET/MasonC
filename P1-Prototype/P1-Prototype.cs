@@ -1,13 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.Json;
 
 namespace TicketingSystem{
     public class P1{
         public static void Main(string[] args){
+            string[] ConnectionString = System.IO.File.ReadAllLines("C:\\Users\\mpcat\\RevatureTraining\\ConnectionStrings\\TestConnStr.txt");
+            string emailStr = "";
             Dictionary<string, User> users = new Dictionary<string, User>();
-            User use = new User(1, "admin", "admin");
-            users.Add("admin", use);
+            emailStr = "";
+
+            // Console.WriteLine(ConnectionString[0]);
+
+            // Since we now have a database get the row where Username = Username in the database
+            // then check to see if the password matches. Don't get the password back from the 
+            // database or else it will be vulnerable.
 
             Console.WriteLine("Please select the number of the option you would like.");
             Console.WriteLine("1 - Login");
@@ -15,7 +23,7 @@ namespace TicketingSystem{
             int num = 0;
             string entry = Console.ReadLine();
             bool loop = Int32.TryParse(entry, out num);
-            Console.WriteLine(use.email + " " + users[use.Password]);
+            // Console.WriteLine(use.Username + " " + users[use.Password]);
             while(!loop || num < 1 || num > 2){
                 Console.WriteLine("\nIncorrect Entry.\nPlease Try Again.\n");
                 Console.WriteLine("Please select the number of the option you would like.");
@@ -27,36 +35,57 @@ namespace TicketingSystem{
             // Console.WriteLine(num); // Debug code line
             bool s = false;
             if(num == 1){
-                s = Login(users);
+                s = Login(emailStr, users);
             } else {
-                s = Register(users);
+                s = Register(emailStr, users);
             }
 
-            if(s){
+            if (s)
+            {
                 Console.WriteLine("Unable to Login/Register the User. Please contact Admin.");
-            } else Console.WriteLine("Successfully Logged in or Registered!");
+            }
+            else
+            {
+                Console.WriteLine("Successfully Logged in or Registered!");
+                //Console.WriteLine($"----------{Int32.TryParse(users[])}----------");
+            }
+
+            // Now that the person has been logged in or registered
+            // Need to make a menu so that the user can decide what to do
+
+            
+
+            // After printing the menu get user input for the selection.
+
+            // Do what the user has decided to do.
+            
+            
 
         }
 
-        public static Boolean Login(Dictionary<string, User> users){
+        // Make methods to view all of the previous tickets
+
+        public static Boolean Login(string emailStr, Dictionary<string, User> users){
             bool loop = true;
             while(loop){
                 Console.WriteLine("Please enter email: ");
-                string email = Console.ReadLine();
-                email = email.Replace("\n", "").Replace("\r", "");
+                string username = Console.ReadLine();
+                username = username.Replace("\n", "").Replace("\r", "");
                 // Console.WriteLine(email);
                 Console.WriteLine("Please enter password: ");
                 string password = Console.ReadLine();
                 password = password.Replace("\n", "").Replace("\r", "");
                 //Console.WriteLine(password);
                 // Verify that the user has an account then check if password matches
-                if (email == null) return false;
-                else return users[email].Equals(password);
+                if (username == null) return false;
+                else return users[username].Equals(password);
+                emailStr = username;
             }
             
             return false;
         }
-        public static Boolean Register(Dictionary<string, User> users)
+
+        public static Boolean Register(string emailStr, Dictionary<string, User> users)
         {
             bool loop = true;
             while(loop){
@@ -71,9 +100,17 @@ namespace TicketingSystem{
                 if (!users.ContainsKey(email))
                 {
                     users.Add(email, new User((users.Count + 1), email, password));
+
+                    // Create user here and add to database
+
+
+
+
+                    emailStr = email;
                     return true;
                 }
                 else return false;
+
             }
             return false;
         }

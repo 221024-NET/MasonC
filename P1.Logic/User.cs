@@ -1,18 +1,24 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.IO;
 
-namespace TicketingSystem{
+
+namespace P1.Logic{
     public class User{
         string permLVL; //Permission level admin has admin privilage else it will be user
-        int id;
-        public string email { get; set; }
+        public int id;
+        public string Email { get; set; }
         public string Password {get; set;}
+
         public List<string> tickets = new List<string>();
 
         public User(){
             permLVL = "Admin";
             id = 999999;
-            email = "admin";
+            Email = "Admin@admin.com";
             Password = "admin";
             tickets.Add("999999");
         }
@@ -20,15 +26,15 @@ namespace TicketingSystem{
         public User(string permLVL, int id, string email, string password, string ticketID){
             this.permLVL = permLVL;
             this.id = id;
-            this.email = email;
+            Email = email;
             Password = password;
             tickets.Add(ticketID);
         }
 
-        public User(int id, string email, string password){
+        public User(int id, string Email, string password){
             permLVL = "User";
             this.id = id;
-            this.email = email;
+            this.Email = Email;
             Password = password;
         }
     
