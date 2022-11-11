@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\P1-Prototype",
+    "\\P1.Data"
   ],
-  "SelectedNode": "\\P1-Prototype.sln",
+  "SelectedNode": "\\P1.Data\\SqlRepository.cs",
   "PreviewInSolutionExplorer": false
 }

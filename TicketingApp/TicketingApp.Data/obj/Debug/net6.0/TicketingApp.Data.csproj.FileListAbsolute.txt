@@ -1,0 +1,15 @@
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Data\obj\Debug\net6.0\TicketingApp.Data.csproj.AssemblyReference.cache
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Data\obj\Debug\net6.0\TicketingApp.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Data\obj\Debug\net6.0\TicketingApp.Data.AssemblyInfoInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Data\obj\Debug\net6.0\TicketingApp.Data.AssemblyInfo.cs
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Data\obj\Debug\net6.0\TicketingApp.Data.csproj.CoreCompileInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Data\bin\Debug\net6.0\TicketingApp.Data.deps.json
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Data\bin\Debug\net6.0\TicketingApp.Data.dll
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Data\bin\Debug\net6.0\TicketingApp.Data.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Data\bin\Debug\net6.0\TicketingApp.Logic.dll
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Data\bin\Debug\net6.0\TicketingApp.Logic.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Data\obj\Debug\net6.0\TicketingApp.Data.csproj.CopyComplete
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Data\obj\Debug\net6.0\TicketingApp.Data.dll
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Data\obj\Debug\net6.0\refint\TicketingApp.Data.dll
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Data\obj\Debug\net6.0\TicketingApp.Data.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Data\obj\Debug\net6.0\ref\TicketingApp.Data.dll

@@ -1,0 +1,12 @@
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Logic\bin\Debug\net6.0\TicketingApp.Logic.deps.json
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Logic\bin\Debug\net6.0\TicketingApp.Logic.dll
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Logic\bin\Debug\net6.0\TicketingApp.Logic.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Logic\obj\Debug\net6.0\TicketingApp.Logic.csproj.AssemblyReference.cache
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Logic\obj\Debug\net6.0\TicketingApp.Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Logic\obj\Debug\net6.0\TicketingApp.Logic.AssemblyInfoInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Logic\obj\Debug\net6.0\TicketingApp.Logic.AssemblyInfo.cs
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Logic\obj\Debug\net6.0\TicketingApp.Logic.csproj.CoreCompileInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Logic\obj\Debug\net6.0\TicketingApp.Logic.dll
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Logic\obj\Debug\net6.0\refint\TicketingApp.Logic.dll
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Logic\obj\Debug\net6.0\TicketingApp.Logic.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\TicketingApp\TicketingApp.Logic\obj\Debug\net6.0\ref\TicketingApp.Logic.dll
