@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TicketingApp.App\TicketingApp.App.csproj" />
     <ProjectReference Include="..\TicketingApp.Data\TicketingApp.Data.csproj" />
+    <ProjectReference Include="..\TicketingApp.InOut\TicketingApp.InOut.csproj" />
     <ProjectReference Include="..\TicketingApp.Logic\TicketingApp.Logic.csproj" />
   </ItemGroup>
 

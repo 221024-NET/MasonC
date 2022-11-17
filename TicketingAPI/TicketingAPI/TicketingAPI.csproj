@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>fa225e53-ca03-42f9-8d4b-d1bf987ebd65</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\TicketingApp\TicketingApp.App\TicketingApp.A.csproj" />
+    <ProjectReference Include="..\..\TicketingApp\TicketingApp.Data\TicketingApp.Data.csproj" />
+    <ProjectReference Include="..\..\TicketingApp\TicketingApp.InOut\TicketingApp.InOut.csproj" />
+    <ProjectReference Include="..\..\TicketingApp\TicketingApp.Logic\TicketingApp.Logic.csproj" />
+  </ItemGroup>
+
+</Project>

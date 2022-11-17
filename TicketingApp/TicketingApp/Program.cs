@@ -1,15 +1,17 @@
-﻿using TicketingApp.Logic;
+﻿using TicketingApp.Data;
+using TicketingApp.InOut;
+using TicketingApp.Logic;
 
-namespace TciketingApp
+namespace TicketingApp.App
 {
     public class TicketingApp
     {
         public static void Main(string[] args)
         {
+            User user, user2;
+            IO io = new IO();
             string[] ConnectionString = System.IO.File.ReadAllLines(@"C:\Users\mpcat\RevatureTraining\ConnectionStrings\TestConnStr.txt");
-            string emailStr = "";
-            Dictionary<string, User> users = new Dictionary<string, User>();
-            emailStr = "";
+            SqlRepository repo = new (ConnectionString[0]);
 
             // Console.WriteLine(ConnectionString[0]);
 
@@ -17,47 +19,53 @@ namespace TciketingApp
             // then check to see if the password matches. Don't get the password back from the 
             // database or else it will be vulnerable.
 
-            Console.WriteLine("Please select the number of the option you would like.");
-            Console.WriteLine("1 - Login");
-            Console.WriteLine("2 - Register");
-            int num = 0;
-            string entry = Console.ReadLine();
-            bool loop = Int32.TryParse(entry, out num);
-            // Console.WriteLine(use.Username + " " + users[use.Password]);
-            while (!loop || num < 1 || num > 2)
-            {
-                Console.WriteLine("\nIncorrect Entry.\nPlease Try Again.\n");
-                Console.WriteLine("Please select the number of the option you would like.");
-                Console.WriteLine("1 - Login");
-                Console.WriteLine("2 - Register");
-                entry = Console.ReadLine();
-                loop = Int32.TryParse(entry, out num);
-            }
+            int num = io.PrintLogRegMenu();
             // Console.WriteLine(num); // Debug code line
             bool s = false;
             if (num == 1)
             {
-                s = Login(emailStr, users);
+                user = io.TryLogin(repo);
+                //SQL query to check if user exists and password matches
             }
             else
             {
-                s = Register(emailStr, users);
+                user = io.TryReg(repo);
+                // SQL query to see if it exists and if it doesn't then create the user
             }
 
-            if (s)
-            {
-                Console.WriteLine("Unable to Login/Register the User. Please contact Admin.");
-            }
-            else
-            {
-                Console.WriteLine("Successfully Logged in or Registered!");
-                //Console.WriteLine($"----------{Int32.TryParse(users[])}----------");
-            }
+
+            List<Ticket> list;
+            //------- Check Permission Level --------
+            // If Manager get all tickets into a List so they may be approved or declined.
+            // Cannot be edited again.
+
+            if(user.permLVL == "Manager")
+                list = repo.GetAllTicketsPending();
+            else 
+                list = repo.GetAllTicketsFromUser(user.id);
+
+            int enter = 0;
 
             // Now that the person has been logged in or registered
             // Need to make a menu so that the user can decide what to do
+            if(user.permLVL == "Manager")
+            {
+                enter = io.PrintMainMenuManager();
+            }
+            else if(user.permLVL == "Admin")
+            {
+                enter = io.PrintMainMenuAdmin();
+            }
+            else
+            {
+                enter = io.PrintMainMenuUser();
+            }
 
-
+            
+            if(enter == 1)
+            {
+                io.PrintAllTickets(repo);
+            }
 
             // After printing the menu get user input for the selection.
 
@@ -68,28 +76,6 @@ namespace TciketingApp
         }
 
         // Make methods to view all of the previous tickets
-
-        public static bool Login(string emailStr, Dictionary<string, User> users)
-        {
-            bool loop = true;
-            while (loop)
-            {
-                Console.WriteLine("Please enter email: ");
-                string username = Console.ReadLine();
-                username = username.Replace("\n", "").Replace("\r", "");
-                // Console.WriteLine(email);
-                Console.WriteLine("Please enter password: ");
-                string password = Console.ReadLine();
-                password = password.Replace("\n", "").Replace("\r", "");
-                //Console.WriteLine(password);
-                // Verify that the user has an account then check if password matches
-                if (username == null) return false;
-                else return users[username].Equals(password);
-                emailStr = username;
-            }
-
-            return false;
-        }
 
         public static bool Register(string emailStr, Dictionary<string, User> users)
         {

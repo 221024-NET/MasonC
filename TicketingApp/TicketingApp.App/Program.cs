@@ -1,6 +1,6 @@
 ﻿using TicketingApp.Logic;
 
-namespace TciketingApp
+namespace TicketingApp
 {
     public class TicketingApp
     {

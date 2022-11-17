@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "p4bBgEia5qJ7PxjL0MnrckmlPkDvZg1XGB7seNhLeC0=",
+  "Source": "MinAPI_Client",
+  "BasePath": "_content/MinAPI_Client",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -10,9 +10,9 @@ namespace TicketingApp.Data
 {
     public interface IRepository
     {
-        public List<Ticket> GetAllTickets();
-        public List<Ticket> GetAllTicketsFromUser(int userId);
-        public Dictionary<string, User> GetAllUsers();
-        public User GetUser(string email);
+        public List<Ticket> GetAllTickets(string connValue);
+        public List<Ticket> GetAllTicketsFromUser(string connValue, int userId);
+        public Dictionary<string, User> GetAllUsers(string connValue);
+        public User GetUser(string connValue, int id);
     }
 }

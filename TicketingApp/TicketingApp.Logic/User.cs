@@ -5,8 +5,8 @@ namespace TicketingApp.Logic
 {
     public class User
     {
-        string permLVL; //Permission level admin has admin privilage else it will be user
-        public int id;
+        public string permLVL { get; set; } //Permission level admin has admin privilage else it will be user
+        public int id { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
 
@@ -14,20 +14,25 @@ namespace TicketingApp.Logic
 
         public User()
         {
-            permLVL = "Admin";
+            permLVL = "User";
             id = 999999;
-            Email = "Admin@admin.com";
-            Password = "admin";
-            tickets.Add("999999");
+            Email = "Sample@sample.com";
+            Password = "Sample";
         }
 
-        public User(string permLVL, int id, string email, string password, string ticketID)
+        public User(string email, string pass)
+        {
+            permLVL = "User";
+            Email = email;
+            Password = pass;
+        }
+
+        public User(string permLVL, int id, string email, string password)
         {
             this.permLVL = permLVL;
             this.id = id;
             Email = email;
             Password = password;
-            tickets.Add(ticketID);
         }
 
         public User(int id, string Email, string password)

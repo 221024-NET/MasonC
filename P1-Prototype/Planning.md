@@ -19,8 +19,7 @@ SELECT * FROM Users;
 
 INSERT INTO USERS (Email, Password)
 VALUES (
-	'Admin@admin.com',
-	'Admin'
+	'Admin@admin.com', 'Admin'
 );
 
  CREATE TABLE Tickets(

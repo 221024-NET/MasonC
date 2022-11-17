@@ -161,6 +161,20 @@
           "bin/placeholder/TicketingApp.Data.dll": {}
         }
       },
+      "TicketingApp.InOut/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "TicketingApp.Data": "1.0.0",
+          "TicketingApp.Logic": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TicketingApp.InOut.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketingApp.InOut.dll": {}
+        }
+      },
       "TicketingApp.Logic/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -495,6 +509,11 @@
       "path": "../TicketingApp.Data/TicketingApp.Data.csproj",
       "msbuildProject": "../TicketingApp.Data/TicketingApp.Data.csproj"
     },
+    "TicketingApp.InOut/1.0.0": {
+      "type": "project",
+      "path": "../TicketingApp.InOut/TicketingApp.InOut.csproj",
+      "msbuildProject": "../TicketingApp.InOut/TicketingApp.InOut.csproj"
+    },
     "TicketingApp.Logic/1.0.0": {
       "type": "project",
       "path": "../TicketingApp.Logic/TicketingApp.Logic.csproj",
@@ -505,6 +524,7 @@
     "net6.0": [
       "System.Data.SqlClient >= 4.8.5",
       "TicketingApp.Data >= 1.0.0",
+      "TicketingApp.InOut >= 1.0.0",
       "TicketingApp.Logic >= 1.0.0"
     ]
   },
@@ -537,6 +557,9 @@
           "projectReferences": {
             "C:\\Users\\mpcat\\RevatureTraining\\MasonC\\TicketingApp\\TicketingApp.Data\\TicketingApp.Data.csproj": {
               "projectPath": "C:\\Users\\mpcat\\RevatureTraining\\MasonC\\TicketingApp\\TicketingApp.Data\\TicketingApp.Data.csproj"
+            },
+            "C:\\Users\\mpcat\\RevatureTraining\\MasonC\\TicketingApp\\TicketingApp.InOut\\TicketingApp.InOut.csproj": {
+              "projectPath": "C:\\Users\\mpcat\\RevatureTraining\\MasonC\\TicketingApp\\TicketingApp.InOut\\TicketingApp.InOut.csproj"
             },
             "C:\\Users\\mpcat\\RevatureTraining\\MasonC\\TicketingApp\\TicketingApp.Logic\\TicketingApp.Logic.csproj": {
               "projectPath": "C:\\Users\\mpcat\\RevatureTraining\\MasonC\\TicketingApp\\TicketingApp.Logic\\TicketingApp.Logic.csproj"

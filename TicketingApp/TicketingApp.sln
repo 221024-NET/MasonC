@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketingApp", "TicketingApp\TicketingApp.csproj", "{297AFD02-DA95-437A-954F-151D45E580ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketingApp.App", "TicketingApp\TicketingApp.App.csproj", "{297AFD02-DA95-437A-954F-151D45E580ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketingApp.App", "TicketingApp.App\TicketingApp.App.csproj", "{8895BAF7-E8E3-4E9C-B0C6-EACAD79E6B71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketingApp.Data", "TicketingApp.Data\TicketingApp.Data.csproj", "{6D302EBD-13EF-4B56-B4B4-B4DD14556ABE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketingApp.Data", "TicketingApp.Data\TicketingApp.Data.csproj", "{6D302EBD-13EF-4B56-B4B4-B4DD14556ABE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketingApp.Logic", "TicketingApp.Logic\TicketingApp.Logic.csproj", "{684C02DD-7369-4ECF-A7B7-6973525085B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketingApp.Logic", "TicketingApp.Logic\TicketingApp.Logic.csproj", "{684C02DD-7369-4ECF-A7B7-6973525085B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketingApp.InOut", "TicketingApp.InOut\TicketingApp.InOut.csproj", "{29CBFB97-6389-40B7-99B1-DF8C563C9580}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{297AFD02-DA95-437A-954F-151D45E580ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{297AFD02-DA95-437A-954F-151D45E580ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{297AFD02-DA95-437A-954F-151D45E580ED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8895BAF7-E8E3-4E9C-B0C6-EACAD79E6B71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8895BAF7-E8E3-4E9C-B0C6-EACAD79E6B71}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8895BAF7-E8E3-4E9C-B0C6-EACAD79E6B71}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8895BAF7-E8E3-4E9C-B0C6-EACAD79E6B71}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6D302EBD-13EF-4B56-B4B4-B4DD14556ABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6D302EBD-13EF-4B56-B4B4-B4DD14556ABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D302EBD-13EF-4B56-B4B4-B4DD14556ABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{684C02DD-7369-4ECF-A7B7-6973525085B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{684C02DD-7369-4ECF-A7B7-6973525085B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{684C02DD-7369-4ECF-A7B7-6973525085B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29CBFB97-6389-40B7-99B1-DF8C563C9580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29CBFB97-6389-40B7-99B1-DF8C563C9580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29CBFB97-6389-40B7-99B1-DF8C563C9580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29CBFB97-6389-40B7-99B1-DF8C563C9580}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
