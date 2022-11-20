@@ -12,7 +12,7 @@ namespace TicketingApp.Data
     {
         public List<Ticket> GetAllTickets(string connValue);
         public List<Ticket> GetAllTicketsFromUser(string connValue, int userId);
-        public Dictionary<string, User> GetAllUsers(string connValue);
+        public List<User> GetAllUsers(string connValue);
         public User GetUser(string connValue, int id);
     }
 }

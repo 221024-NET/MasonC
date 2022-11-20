@@ -38,7 +38,7 @@ namespace TicketingApp.Data
                     // TicketId    Status   Amount   Description   UserId
                     int userId = Int32.Parse(reader["UserId"].ToString());
                     int ticketId = Int32.Parse(reader["TicketId"].ToString());
-                    double amount = double.Parse(reader["Amount"].ToString());
+                    float amount = float.Parse(reader["Amount"].ToString());
                     string status = reader["Status"].ToString();
                     string description = reader["Description"].ToString();
                     if(status == null) status = "Empty";
@@ -115,23 +115,24 @@ namespace TicketingApp.Data
             return tickets;
         }
 
-        public Dictionary<string, User> GetAllUsers(string connValue)
+        public List<User> GetAllUsers(string connValue)
         {
             ConnectionString = connValue;
-            Dictionary<string, User> users = new Dictionary<string, User>();
+            List<User> users = new List<User>();
             using SqlConnection connection = new SqlConnection(ConnectionString);
             connection.Open();
 
-            string cmdText = @"SELECT * FROM Users;";
+            string cmdText = @"SELECT UserId, Email, Permission FROM Users;";
             SqlCommand cmd = new SqlCommand(cmdText, connection);
             using SqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
             {
                 // UserId   Email   Password
-                int userId = reader.GetInt32(0);
-                string email = reader.GetString(1);
-                users.Add(email, new User(userId, email, "False"));
+                int userId = Int32.Parse(reader["UserId"].ToString());
+                string email = reader["Email"].ToString();
+                string perm = reader["Permission"].ToString();
+                users.Add(new User(perm, userId, email, "False"));
             }
             reader.Close();
             cmd.Dispose();
@@ -224,38 +225,147 @@ namespace TicketingApp.Data
             return user;
         }
 
-        public Ticket NewTicket(string connValue, int userId, double amount, string status, string des)
+        public Ticket NewTicket(string connValue, string status, double amount, string des, int userId)
         {
             ConnectionString = connValue;
-            int ticketId = 0;
             using SqlConnection connection = new SqlConnection(ConnectionString);
             connection.Open();
 
-            string cmdText = @"INSERT INTO Tickets (Status, Amount, Description, UserId) VALUES(@status, @amount, @des, @userId);"
-                            + "SELECT @@IDENTITY FROM Tickets;";
+            // Try to separate out the ints and doubles
+            var cmdText = @"INSERT INTO Tickets (Status, Amount, Description, UserId) " +
+                            "VALUES(@s, @a, @d, @u); SELECT @@IDENTITY FROM Tickets;";
+            //@"SELECT IDENT_CURRENT('Tickets');";
 
-            
+
             SqlCommand cmd = new SqlCommand(cmdText, connection);
 
-            cmd.Parameters.AddWithValue("@status", status);
-            cmd.Parameters.AddWithValue("@amount", amount);
-            cmd.Parameters.AddWithValue("@des", des);
-            cmd.Parameters.AddWithValue("@userId", userId);
+            cmd.Parameters.AddWithValue("@s", status);
+            cmd.Parameters.AddWithValue("@a", amount);
+            cmd.Parameters.AddWithValue("@d", des);
+            cmd.Parameters.AddWithValue("@u", userId);
+
+            int id = Convert.ToInt32(cmd.ExecuteScalar());
+            connection.Close();
+            cmd.Dispose();
+            connection.Close();
+
+            //Console.WriteLine("Inside NewTicket() method");
+
+            //using (SqlConnection connection = new SqlConnection(connValue))
+            //{
+            //    StringBuilder qry = new StringBuilder();
+            //    qry.Append("INSERT INTO Tickets");
+            //    qry.Append(" (Status, Amount, Description, UserId)");
+            //    qry.Append($" VALUES (");
+            //    qry.Append($" '{t.status}',");
+            //    qry.Append($" {t.amount},");
+            //    qry.Append($" '{t.description}',");
+            //    qry.Append($" {t.userId});");
+            //    qry.Append($" SELECT @@IDENTITY;");
+            //    Console.WriteLine(qry.ToString());
+
+            //    SqlCommand cmd = new SqlCommand(qry.ToString(), connection);
+            //    connection.Open();
+            //    int newId = Convert.ToInt32(cmd.ExecuteScalar());
+            //    t.ticketId = newId;
+            //    cmd.Dispose();
+            //}
+
+            return new Ticket(userId, id, amount, status, des);
+        }
+
+        //Update user privaleges from User to Manager.
+
+        //Update ticket so that status will be accepted or denied.
+
+        public Ticket AccpetTicket(string conn, int id)
+        {
+            Ticket? tick = null;
+            ConnectionString = conn;
+            using SqlConnection connection = new SqlConnection(ConnectionString);
+            connection.Open();
+            string cmdText = @"UPDATE Tickets SET Status = 'Accepted' WHERE TicketId = @id;SELECT * FROM Tickets WHERE TicketId = @id;";
+            SqlCommand cmd = new SqlCommand(cmdText, connection);
+
+            cmd.Parameters.AddWithValue("@id", id);
 
             using SqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
             {
-                ticketId = Int32.Parse(reader["TicketId"].ToString());
+                // TicketId    Status   Amount   Description   UserId
+                int ticketId = reader.GetInt32(0);
+                double amount = reader.GetDouble(2);
+                string status = reader.GetString(1);
+                string description = reader.GetString(3);
+                int userID = reader.GetInt32(4);
+                tick = new Ticket(userID, ticketId, amount, status, description);
             }
 
-            Ticket ticket = new Ticket(userId, ticketId, amount, status, des);
-
-            connection.Close();
             cmd.Dispose();
             connection.Close();
 
-            return ticket;
+            return tick;
+        }
+
+        public Ticket DeclineTicket(string conn, int id)
+        {
+            Ticket? tick = null;
+            ConnectionString = conn;
+            using SqlConnection connection = new SqlConnection(ConnectionString);
+            connection.Open();
+            string cmdText = @"UPDATE Tickets SET Status = 'Declined' WHERE TicketId = @id;SELECT * FROM Tickets WHERE TicketId = @id;";
+            SqlCommand cmd = new SqlCommand(cmdText, connection);
+
+            cmd.Parameters.AddWithValue("@id", id);
+
+            using SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                // TicketId    Status   Amount   Description   UserId
+                int ticketId = reader.GetInt32(0);
+                double amount = reader.GetDouble(2);
+                string status = reader.GetString(1);
+                string description = reader.GetString(3);
+                int userID = reader.GetInt32(4);
+                tick = new Ticket(userID, ticketId, amount, status, description);
+            }
+
+            cmd.Dispose();
+            connection.Close();
+
+            return tick;
+        }
+
+        public void ChangeUserPermM(string conn, int id)
+        {
+            ConnectionString = conn;
+            using SqlConnection connection = new SqlConnection(ConnectionString);
+            connection.Open();
+            string cmdText = @"UPDATE Users SET Permission = 'Manager' WHERE UserId = @id;";
+            SqlCommand cmd = new SqlCommand(cmdText, connection);
+
+            cmd.Parameters.AddWithValue("@id", id);
+
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            connection.Close();
+        }
+
+        public void ChangeUserPermU(string conn, int id)
+        {
+            ConnectionString = conn;
+            using SqlConnection connection = new SqlConnection(ConnectionString);
+            connection.Open();
+            string cmdText = @"UPDATE Users SET Permission = 'User' WHERE UserId = @id;";
+            SqlCommand cmd = new SqlCommand(cmdText, connection);
+
+            cmd.Parameters.AddWithValue("@id", id);
+
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            connection.Close();
         }
     }
 }

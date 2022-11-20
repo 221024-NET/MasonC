@@ -128,7 +128,7 @@ namespace TicketingApp.InOut
         {
             string num;
             int i = 0;
-            Console.WriteLine("1. View My Tickets");
+            Console.WriteLine("1. View All Of My Tickets");
             Console.WriteLine("2. Submit New Ticket");
 
             while (true)
@@ -139,7 +139,7 @@ namespace TicketingApp.InOut
                 {
                     return i;
                 }
-                Console.WriteLine("1. View My Tickets");
+                Console.WriteLine("1. View All Of My Tickets");
                 Console.WriteLine("2. Submit New Ticket");
             }
 
@@ -149,7 +149,7 @@ namespace TicketingApp.InOut
         {
             string num;
             int i = 0;
-            Console.WriteLine("1. View All Tickets");
+            Console.WriteLine("1. View All Pending Tickets");
             Console.WriteLine("2. Change User Permission Level (Need User Email)");
             while (true)
             {
@@ -159,7 +159,7 @@ namespace TicketingApp.InOut
                 {
                     return i;
                 }
-                Console.WriteLine("1. View All Tickets");
+                Console.WriteLine("1. View All Pending Tickets");
                 Console.WriteLine("2. Change User Permission Level (Need User Email)");
             }
 
@@ -187,14 +187,14 @@ namespace TicketingApp.InOut
 
         public void PrintAllTickets(SqlRepository repo)
         {
-            List<Ticket> list = repo.GetAllTicketsPending();
+            //List<Ticket> list = repo.GetAllTicketsPending();
 
-            Console.WriteLine("Ticket ID - User ID - Amount");
-            foreach (Ticket ticket in list)
-            {
-                Console.WriteLine(ticket.ticketId + " " + ticket.userId + " " + ticket.amount);
-                Console.WriteLine(ticket.description + "\n");
-            }
+            //Console.WriteLine("Ticket ID - User ID - Amount");
+            //foreach (Ticket ticket in list)
+            //{
+                //Console.WriteLine(ticket.ticketId + " " + ticket.userId + " " + ticket.amount);
+                //Console.WriteLine(ticket.description + "\n");
+            //}
         }
     }
 }

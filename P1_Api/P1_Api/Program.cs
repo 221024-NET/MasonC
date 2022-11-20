@@ -40,27 +40,60 @@ app.MapGet("/tickets/Pending", (SqlRepository repo) =>
 app.MapGet("/tickets/{id}", (int id, SqlRepository repo) => 
     repo.GetAllTicketsFromUser(connValue, id));
 
-//GetAllUsers
+//GetAllUsers -- Implement but don't get passwords
 app.MapGet("/Users", (SqlRepository repo) =>
     repo.GetAllUsers(connValue));
 
-//GetUser
+//GetUser - Don't implement
 app.MapGet("/Users/{id}", (int id, SqlRepository repo) =>
     repo.GetUser(connValue, id));
 
-//Login
-app.MapPost("/Users/Login", (User user, SqlRepository repo) =>
+//Login -- Done
+app.MapPost("/Login", (User user, SqlRepository repo) =>
 {
     user = repo.Login(connValue, user.Email, user.Password);
     return Results.Created($"/Users/{user.id}", user);
 });
 
-
-//Register
-app.MapPost("/Users/Register", (User user, SqlRepository repo) =>
+//Register -- Done
+app.MapPost("/Register", (User user, SqlRepository repo) =>
 {
     user = repo.Register(connValue, user.Email, user.Password);
     return Results.Created($"/Users/{user.id}", user);
+});
+
+// create ticket
+app.MapPost("/tickets", (Ticket t, SqlRepository repo) =>
+{
+    Ticket tick = repo.NewTicket(connValue, t.status, t.amount, t.description, t.userId);
+    return Results.Created($"/tickets/{tick.ticketId}", tick);
+});
+
+//AcceptTicket
+app.MapPut("ticket/Accpet/{id}", (int id, SqlRepository repo) =>
+{
+    repo.AccpetTicket(connValue, id);
+    return Results.NoContent();
+});
+
+//Decline Ticket
+app.MapPut("ticket/Decline/{id}", (int id, SqlRepository repo) =>
+{
+    repo.DeclineTicket(connValue, id);
+    return Results.NoContent();
+});
+
+//IncPermLevel
+app.MapPut("/PermissionM/{id}", (int id, SqlRepository repo) =>
+{
+    repo.ChangeUserPermM(connValue, id);
+    return Results.NoContent();
+});
+
+app.MapPut("/PermissionU/{id}", (int id, SqlRepository repo) =>
+{
+    repo.ChangeUserPermU(connValue, id);
+    return Results.NoContent();
 });
 
 

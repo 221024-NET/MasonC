@@ -39,6 +39,20 @@ VALUES (
 	1
 );
 
+INSERT INTO Tickets(Status, Amount, Description, UserId)
+VALUES ('Pending', 1000000.00, 'Example', 1);
+
+INSERT INTO Tickets(Status, Amount, Description, UserId)
+VALUES ('Pending', 1.00, 'Example', 1);
+INSERT INTO Tickets(Status, Amount, Description, UserId)
+VALUES ('Pending', 20.00, 'Example', 1);
+INSERT INTO Tickets(Status, Amount, Description, UserId)
+VALUES ('Pending', 100.00, 'Example', 1);
+INSERT INTO Tickets(Status, Amount, Description, UserId)
+VALUES ('Pending', 1000.00, 'Example', 1);
+INSERT INTO Tickets(Status, Amount, Description, UserId)
+VALUES ('Pending', 50.00, 'Example', 1);
+
 SELECT * FROM Tickets;
 
 SELECT * FROM Tickets WHERE Status = 'Pending';
@@ -50,3 +64,5 @@ SELECT * FROM Users;
 SELECT * FROM Users WHERE UserId = 1;
 
 SELECT * FROM Users WHERE Email = 'Admin@admin.com' AND Password = 'Admin';
+
+UPDATE Users SET Permission = 'Manager' WHERE Email = 'Admin@admin.com';

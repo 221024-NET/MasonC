@@ -110,7 +110,7 @@ namespace MinApi
             using (SqlConnection connection = new SqlConnection(connString))
             {
                 StringBuilder qry = new StringBuilder();
-                qry.Append(" DELET FROM Customer");
+                qry.Append(" DELETE FROM Customer");
                 qry.Append($" WHERE CustomerId = '{id}';");
                 Console.WriteLine(qry.ToString());
 
