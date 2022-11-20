@@ -200,6 +200,40 @@ namespace TicketingApp.Data
             return user;
         }
 
+        public bool EmailALreadyUsed(string connValue, string e)
+        {
+            ConnectionString = connValue;
+            List<string> list = new List<string>();
+            User user = new User();
+            bool contains = false;
+
+            using SqlConnection connection = new SqlConnection(ConnectionString);
+
+            connection.Open();
+
+            string newE = "%" + e + "%";
+
+            string cmdText = @"SELECT * FROM Users WHERE Email LIKE @e;";
+            SqlCommand cmd = new SqlCommand(cmdText, connection);
+
+            cmd.Parameters.AddWithValue("@e", newE);
+
+            using SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                user.Email = reader.GetString(1);
+                list.Add(user.Email);
+            }
+
+            if (list.Contains(e))
+            {
+                contains = true;
+            }
+
+            return contains;
+        }
+
         public User Register(string connValue, string e, string p)
         {
             ConnectionString = connValue;
@@ -208,19 +242,28 @@ namespace TicketingApp.Data
             using SqlConnection connection = new SqlConnection(ConnectionString);
             connection.Open();
 
-            string cmdText = @"INSERT INTO Users (Email, Password, Permission) VALUES(@e, @p, @use);";
+            bool emailUsed = EmailALreadyUsed(connValue, e);
 
-            SqlCommand cmd = new SqlCommand(cmdText, connection);
+            if(!emailUsed)
+            {
+                string cmdText = @"INSERT INTO Users (Email, Password, Permission) VALUES(@e, @p, @use);";
 
-            cmd.Parameters.AddWithValue("@e", e);
-            cmd.Parameters.AddWithValue("@p", p);
-            cmd.Parameters.AddWithValue("@use", use);
+                SqlCommand cmd = new SqlCommand(cmdText, connection);
 
-            cmd.ExecuteNonQuery();
-            cmd.Dispose();
-            connection.Close();
+                cmd.Parameters.AddWithValue("@e", e);
+                cmd.Parameters.AddWithValue("@p", p);
+                cmd.Parameters.AddWithValue("@use", use);
 
-            user = Login(ConnectionString, e, p);
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+                connection.Close();
+
+                user = Login(ConnectionString, e, p);
+            }
+            else
+            {
+                user = new User();
+            }
 
             return user;
         }

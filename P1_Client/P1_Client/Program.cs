@@ -62,6 +62,8 @@ namespace P1_Client
 
                 //If here then user has successfully logged/registered.
 
+
+
                 while(true)
                 {
                     ShowUser(user);
@@ -69,6 +71,12 @@ namespace P1_Client
                     {
                         //Give manager menu
                         num = io.PrintMainMenuManager();
+
+                        // switch(num):
+                        // case 1: 
+                        // default: 
+
+
                         if (num == 1)
                         {
                             // View Pending tickets
@@ -175,6 +183,23 @@ namespace P1_Client
             }
         }
 
+        static async Task<List<string>> GetEmailsAsync()
+        {
+            List<User> users = new List<User>();
+            List<string> emails = new List<string>();
+            HttpResponseMessage response = await client.GetAsync("/Users");
+            if(response.IsSuccessStatusCode)
+            {
+                users = await response.Content.ReadAsAsync<List<User>>();
+            }
+            foreach (User user in users)
+            {
+                emails.Add(user.Email);
+            }
+
+            return emails;
+        }
+
         static async Task<List<Ticket>> GetTicketsPendingAsync(string path)
         {
             List<Ticket> tickets;
@@ -232,11 +257,13 @@ namespace P1_Client
 
             u.Email = username;
             u.Password = password;
+
             HttpResponseMessage response = await client.PostAsJsonAsync("Login", u);
+
             if (response.IsSuccessStatusCode)
             {
                 user = await response.Content.ReadAsAsync<User>();
-            } 
+            }
             else
             {
                 user = new User();
@@ -259,6 +286,13 @@ namespace P1_Client
             password = Console.ReadLine();
             //Console.WriteLine(password);
 
+            List<string> list = await GetEmailsAsync();
+            if(list.Contains(username))
+            {
+                Console.WriteLine("That Username is unavailable.\n Please try again.");
+                Environment.Exit(1);
+            }
+
             if (username == null || password == null)
             {
                 Console.WriteLine("One of the entries was invalid.\n Please try again.");
@@ -279,6 +313,8 @@ namespace P1_Client
             {
                 user = new User();
             }
+
+
             return user;
         }
 
