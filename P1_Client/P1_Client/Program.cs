@@ -26,6 +26,8 @@ namespace P1_Client
 
             try
             {
+                // ----****----Application should not stop when logging out to get back to the log in page
+
                 Ticket? tick = null;
                 User? user = null;
                 IO io = new IO();
@@ -36,7 +38,7 @@ namespace P1_Client
                 {
                     //Login here
                     user = await LoginAsync();
-                    if (user.Email == "default")
+                    if (user.Email == "Sample@sample.com")
                     {
                         //Failed to successfully login
                         Console.WriteLine("Unable to Log the user in at this time.\n Please try again later.");
@@ -49,7 +51,7 @@ namespace P1_Client
                 {
                     //register here
                     user = await RegisterAsync();
-                    if (user.Email == "default")
+                    if (user.Email == "Sample@sample.com")
                     {
                         //Failed to successfully login
                         Console.WriteLine("Unable to Register a new user at this time.\n Please try again later.");
@@ -223,14 +225,15 @@ namespace P1_Client
 
         static void ShowUser(User u)
         {
-            Console.WriteLine($"User ID: {u.id}\t Email: {u.Email}\t Permission Level: {u.permLVL}\t\n");
+            //  ----****----Don't display userId, use the user email
+            Console.WriteLine($"Email: {u.Email}\t Permission Level: {u.permLVL}\t\n");
         }
 
         static void ShowTicket(Ticket t)
         {
             if(t != null)
             {
-                Console.WriteLine($"Ticket ID: {t.ticketId}\t User ID: {t.userId}\t Amount: {t.amount}\t" +
+                Console.WriteLine($"Ticket ID: {t.ticketId}\t  Amount: {t.amount}\t" +
                 $" Status: {t.status}\t Description: {t.description}\t\n");
             }
             
@@ -287,6 +290,7 @@ namespace P1_Client
             //Console.WriteLine(password);
 
             List<string> list = await GetEmailsAsync();
+
             if(list.Contains(username))
             {
                 Console.WriteLine("That Username is unavailable.\n Please try again.");
@@ -305,6 +309,7 @@ namespace P1_Client
             
 
             HttpResponseMessage response = await client.PostAsJsonAsync("Register", u);
+
             if (response.IsSuccessStatusCode)
             {
                 user = await response.Content.ReadAsAsync<User>();

@@ -16,7 +16,7 @@ namespace TicketingApp.Logic
         {
             permLVL = "User";
             id = 999999;
-            Email = "default";
+            Email = "Sample@sample.com";
             Password = "Sample";
         }
 
