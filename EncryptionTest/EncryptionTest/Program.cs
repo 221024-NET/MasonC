@@ -13,7 +13,6 @@ namespace SHA256Demo
     {
         static void Main(string[] args)
         {
-
             SHA256 myHash = SHA256.Create();
 
             string password = Console.ReadLine().ToString();
@@ -28,5 +27,6 @@ namespace SHA256Demo
 
             Console.WriteLine(hash);
         }
+
     }
 }
