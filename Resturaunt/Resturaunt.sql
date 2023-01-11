@@ -1,4 +1,7 @@
-﻿DROP DATABASE Restaurants;
+﻿
+-- Data Source=DESKTOP-C46S740\SQLEXPRESS;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False; --
+
+DROP DATABASE Restaurants;
 CREATE DATABASE Restaurants;
 
 USE Restaurants;
@@ -16,7 +19,7 @@ CREATE TABLE Restaurant(
 CREATE TABLE Cuisine(
 	Id int NOT NULL IDENTITY,
 	Name VARCHAR(255) NOT NULL,
-	Rest_Id INT NOT NULL,
+	RestId INT NOT NULL,
 	PRIMARY KEY(Id),
 	FOREIGN KEY(RestID) REFERENCES Restaurant(Id)
 );
@@ -30,28 +33,29 @@ CREATE TABLE RestConnCuisine(
 	FOREIGN KEY(CuisineID) REFERENCES Cuisine(Id)
 );
 
-ALTER TABLE Menu DROP CONSTRAINT Restaurant_id;
+ALTER TABLE Menu DROP CONSTRAINT RestId;
 
 DROP TABLE Menu;
+
 CREATE TABLE Menu(
 	Id INT NOT NULL IDENTITY,
 	Name VARCHAR(255) NOT NULL,
 	Price decimal(18, 2) NOT NULL,
-	Restauraunt_id INT NOT NULL,
+	RestId INT NOT NULL,
 	PRIMARY KEY(Id),
-	FOREIGN KEY(Restaurant_id) REFERENCES Restaurant(Id)
+	FOREIGN KEY(RestId) REFERENCES Restaurant(Id)
 );
 
-ALTER TABLE Score DROP CONSTRAINT Restarant_id;
+ALTER TABLE Score DROP CONSTRAINT RestId;
 
 DROP TABLE Score;
 CREATE TABLE Score(
 	Id INT NOT NULL IDENTITY,
 	Score INT NOT NULL,
 	date_submit DATE NOT NULL,
-	Restaurant_id INT NOT NULL,
+	RestId INT NOT NULL,
 	PRIMARY KEY(Id),
-	FOREIGN KEY(Restaurant_id) REFERENCES Restaurant(Id)
+	FOREIGN KEY(RestId) REFERENCES Restaurant(Id)
 );
 
 ALTER TABLE Grade DROP CONSTRAINT Restaurant_id;
@@ -60,9 +64,9 @@ DROP TABLE Grade;
 CREATE TABLE Grade(
 	Id INT NOT NULL IDENTITY,
 	Grade CHAR NOT NULL,
-	Restauraunt_id INT NOT NULL,
+	RestId INT NOT NULL,
 	PRIMARY KEY(Id),
-	FOREIGN KEY(Restauraunt_id) REFERENCES Restauraunt(Id)
+	FOREIGN KEY(RestId) REFERENCES Restaurant(Id)
 );
 
 
