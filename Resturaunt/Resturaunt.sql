@@ -1,0 +1,72 @@
+﻿DROP DATABASE Restaurants;
+CREATE DATABASE Restaurants;
+
+USE Restaurants;
+
+DROP TABLE Restaurant;
+CREATE TABLE Restaurant(
+	Id INT NOT NULL IDENTITY,
+	Name VARCHAR(255) NOT NULL,
+	Street_addr VARCHAR(255) NOT NULL,
+	City VARCHAR(255) NOT NULL,
+	State VARCHAR(255) NOT NULL,
+	PRIMARY KEY(Id)
+);
+
+CREATE TABLE Cuisine(
+	Id int NOT NULL IDENTITY,
+	Name VARCHAR(255) NOT NULL,
+	Rest_Id INT NOT NULL,
+	PRIMARY KEY(Id),
+	FOREIGN KEY(RestID) REFERENCES Restaurant(Id)
+);
+
+CREATE TABLE RestConnCuisine(
+	Id INT NOT NULL,
+	RestID INT NOT NULL,
+	CuisineID INT NOT NULL,
+	PRIMARY KEY(Id),
+	FOREIGN KEY(RestID) REFERENCES Restaurant(Id),
+	FOREIGN KEY(CuisineID) REFERENCES Cuisine(Id)
+);
+
+ALTER TABLE Menu DROP CONSTRAINT Restaurant_id;
+
+DROP TABLE Menu;
+CREATE TABLE Menu(
+	Id INT NOT NULL IDENTITY,
+	Name VARCHAR(255) NOT NULL,
+	Price decimal(18, 2) NOT NULL,
+	Restauraunt_id INT NOT NULL,
+	PRIMARY KEY(Id),
+	FOREIGN KEY(Restaurant_id) REFERENCES Restaurant(Id)
+);
+
+ALTER TABLE Score DROP CONSTRAINT Restarant_id;
+
+DROP TABLE Score;
+CREATE TABLE Score(
+	Id INT NOT NULL IDENTITY,
+	Score INT NOT NULL,
+	date_submit DATE NOT NULL,
+	Restaurant_id INT NOT NULL,
+	PRIMARY KEY(Id),
+	FOREIGN KEY(Restaurant_id) REFERENCES Restaurant(Id)
+);
+
+ALTER TABLE Grade DROP CONSTRAINT Restaurant_id;
+
+DROP TABLE Grade;
+CREATE TABLE Grade(
+	Id INT NOT NULL IDENTITY,
+	Grade CHAR NOT NULL,
+	Restauraunt_id INT NOT NULL,
+	PRIMARY KEY(Id),
+	FOREIGN KEY(Restauraunt_id) REFERENCES Restauraunt(Id)
+);
+
+
+SELECT * FROM Restaurant;
+SELECT * FROM Menu;
+SELECT * FROM Score;
+SELECT * FROM Grade;

@@ -26,11 +26,12 @@ SELECT * FROM Duplicates;
 
 /* Delete dulicate records from a table without using Rank() function. */
 
-DELETE FROM Duplicates WHERE Id NOT IN ( SELECT Min(Id) FROM Duplicates GROUP BY Fname, Lname);
+DELETE FROM Duplicates WHERE Id NOT IN ( SELECT MIN(Id) FROM Duplicates GROUP BY Fname, Lname);
 
 /* Delete dulicate records from a table using Rank() function. */
 
 SELECT * FROM Duplicates;
 
 
-DELETE DupRecs FROM (SELECT *, DupeRank = RANK() OVER(PARTITION BY Fname ORDER BY Id DESC) FROM Duplicates) AS DupRecs WHERE DupeRank > 1;
+DELETE DupeRecs FROM (SELECT *, DupeRank = RANK() OVER(PARTITION BY Fname, Lname ORDER BY Id ASC) FROM Duplicates) AS DupeRecs WHERE DupeRank > 1;
+SELECT * FROM Duplicates;
