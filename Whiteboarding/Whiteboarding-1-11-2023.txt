@@ -1,0 +1,24 @@
+Normalization
+	Explain rules for 3 NFs
+
+	1NF: 
+		Only has single valued columns.
+		Values stored in a column should be of the same domain.
+		All columns in a table should have unique names.
+		Order doesn't matter.
+	
+	2NF:
+		Has to be 1NF.
+		Shouldn't have partial dependency.
+
+	3NF:
+		Is in 2NF.
+		Doesn't have Transitive dependency
+	
+	
+	
+Query to delete duplicate records
+
+	1. Using regular query:
+	
+	2. Using RANK() function:
