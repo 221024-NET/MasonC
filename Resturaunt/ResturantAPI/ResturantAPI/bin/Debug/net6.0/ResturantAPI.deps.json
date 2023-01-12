@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "ResturantAPI/1.0.0": {
         "dependencies": {
+          "Microsoft.Data.SqlClient": "5.0.1",
           "Microsoft.EntityFrameworkCore": "7.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.13",

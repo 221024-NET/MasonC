@@ -10585,6 +10585,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Microsoft.Data.SqlClient >= 5.0.1",
       "Microsoft.EntityFrameworkCore >= 7.0.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.13",
@@ -10631,6 +10632,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.Data.SqlClient": {
+            "target": "Package",
+            "version": "[5.0.1, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.2, )"
