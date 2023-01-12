@@ -1,0 +1,15 @@
+C:\Users\mpcat\RevatureTraining\MasonC\Resturaunt\DemoEFSP\DemoEFSP\bin\Debug\net6.0\DemoEFSP.exe
+C:\Users\mpcat\RevatureTraining\MasonC\Resturaunt\DemoEFSP\DemoEFSP\bin\Debug\net6.0\DemoEFSP.deps.json
+C:\Users\mpcat\RevatureTraining\MasonC\Resturaunt\DemoEFSP\DemoEFSP\bin\Debug\net6.0\DemoEFSP.runtimeconfig.json
+C:\Users\mpcat\RevatureTraining\MasonC\Resturaunt\DemoEFSP\DemoEFSP\bin\Debug\net6.0\DemoEFSP.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Resturaunt\DemoEFSP\DemoEFSP\bin\Debug\net6.0\DemoEFSP.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\Resturaunt\DemoEFSP\DemoEFSP\obj\Debug\net6.0\DemoEFSP.csproj.AssemblyReference.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Resturaunt\DemoEFSP\DemoEFSP\obj\Debug\net6.0\DemoEFSP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mpcat\RevatureTraining\MasonC\Resturaunt\DemoEFSP\DemoEFSP\obj\Debug\net6.0\DemoEFSP.AssemblyInfoInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Resturaunt\DemoEFSP\DemoEFSP\obj\Debug\net6.0\DemoEFSP.AssemblyInfo.cs
+C:\Users\mpcat\RevatureTraining\MasonC\Resturaunt\DemoEFSP\DemoEFSP\obj\Debug\net6.0\DemoEFSP.csproj.CoreCompileInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Resturaunt\DemoEFSP\DemoEFSP\obj\Debug\net6.0\DemoEFSP.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Resturaunt\DemoEFSP\DemoEFSP\obj\Debug\net6.0\refint\DemoEFSP.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Resturaunt\DemoEFSP\DemoEFSP\obj\Debug\net6.0\DemoEFSP.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\Resturaunt\DemoEFSP\DemoEFSP\obj\Debug\net6.0\DemoEFSP.genruntimeconfig.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Resturaunt\DemoEFSP\DemoEFSP\obj\Debug\net6.0\ref\DemoEFSP.dll
