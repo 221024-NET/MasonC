@@ -16,13 +16,29 @@ namespace ResturantAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Resturaunt>>> GetResturants()
+        public async Task<ActionResult<IEnumerable<Restaurant>>> GetResturants()
         {
             if(_context.Resturants == null)
             {
                 return NotFound();
             }
             return await _context.Resturants.ToListAsync();
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<IEnumerable<Restaurant>>> GetRestaurant(int? id)
+        {
+            return _context.Resturants.Where(x => x.Id == id).ToList();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Restaurant>> PostRestaurant(Restaurant rest)
+        {
+            rest.Id = null;
+            _context.Resturants.Add(rest);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetRestaurant", new { id = rest.Id }, rest);
         }
     }
 }

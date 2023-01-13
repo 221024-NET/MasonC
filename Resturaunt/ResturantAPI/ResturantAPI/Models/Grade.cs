@@ -5,8 +5,8 @@ namespace ResturantAPI.Models;
 public class Grade
 {
     [Key]
-    public int Id { get; set; }
-    public int grade { get; set; }
-    public int RestId { get; set; }
+    public int? Id { get; set; }
+    public int? grade { get; set; }
+    public int? RestId { get; set; }
     
 }

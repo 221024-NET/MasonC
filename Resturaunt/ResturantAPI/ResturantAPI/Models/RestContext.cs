@@ -9,7 +9,7 @@ public class RestContext : DbContext
     public RestContext(DbContextOptions<RestContext> options) : base(options)
     { }
 
-    public DbSet<Resturaunt> Resturants { get; set; } = null!;
+    public DbSet<Restaurant> Resturants { get; set; } = null!;
     public DbSet<Cuisine> Cuisines { get; set; } = null!;
     public DbSet<Grade> Grades { get; set; } = null!;
     public DbSet<Menu> Menus { get; set; } = null!;
@@ -18,7 +18,7 @@ public class RestContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Resturaunt>(entity =>
+        modelBuilder.Entity<Restaurant>(entity =>
             { entity.ToTable("Restaurant");  } );
 
         modelBuilder.Entity<Cuisine>(entity =>
