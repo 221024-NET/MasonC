@@ -1,4 +1,4 @@
-namespace ResturantAPI.Models
+namespace StoredProcedure.Models
 {
     public class WeatherForecast
     {

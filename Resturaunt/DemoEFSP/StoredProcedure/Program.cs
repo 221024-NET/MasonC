@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ResturantAPI.Models;
+using StoredProcedure.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,15 +10,25 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-#pragma warning disable CS8634 // The type cannot be used as type parameter in the generic type or method. Nullability of type argument doesn't match 'class' constraint.
-builder.Services.AddScoped(provider => provider.GetService<DBContext>());
-#pragma warning restore CS8634 // The type cannot be used as type parameter in the generic type or method. Nullability of type argument doesn't match 'class' constraint.
-
 var connectionString = builder.Configuration["ConnectionStrings:db"];
 
-builder.Services.AddDbContext<DBContext>(opts =>
+builder.Services.AddDbContext<StudentContext>(opts =>
     opts.UseSqlServer(connectionString)
 );
+
+var StudentAPI = "StrudentAPI";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: StudentAPI,
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:4200")
+                   .AllowAnyMethod()
+                   .AllowAnyHeader()
+                   .AllowCredentials();
+        });
+});
 
 builder.Services.AddMvc().AddControllersAsServices();
 builder.Services.AddControllers();
