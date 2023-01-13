@@ -6,7 +6,7 @@ namespace ResturantAPI.Models;
 
 public class RestContext : DbContext
 {
-    public RestContext(DbContextOptions<DbContext> options) : base(options)
+    public RestContext(DbContextOptions<RestContext> options) : base(options)
     { }
 
     public DbSet<Resturaunt> Resturants { get; set; } = null!;
@@ -19,7 +19,7 @@ public class RestContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Resturaunt>(entity =>
-            { entity.ToTable("Resturant");  } );
+            { entity.ToTable("Restaurant");  } );
 
         modelBuilder.Entity<Cuisine>(entity =>
             { entity.ToTable("Cuisine"); } );

@@ -4,8 +4,8 @@ using ResturantAPI.Models;
 
 namespace ResturantAPI.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class MenuController : Controller
     {
         private readonly RestContext _context;

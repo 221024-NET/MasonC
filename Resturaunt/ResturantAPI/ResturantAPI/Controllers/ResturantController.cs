@@ -4,8 +4,8 @@ using ResturantAPI.Models;
 
 namespace ResturantAPI.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class ResturantController : Controller
     {
         private readonly RestContext _context;
@@ -18,6 +18,10 @@ namespace ResturantAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Resturaunt>>> GetResturants()
         {
+            if(_context.Resturants == null)
+            {
+                return NotFound();
+            }
             return await _context.Resturants.ToListAsync();
         }
     }
