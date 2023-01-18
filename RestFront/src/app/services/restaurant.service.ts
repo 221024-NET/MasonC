@@ -9,8 +9,17 @@ import { Restaurant } from '../models/Restaurant';
 })
 export class RestaurantService {
   private restUrl: string = environment.baseUrl + "/api/Restaurant";
+  private restaurant: Restaurant = new Restaurant(0, "","","","");
 
   constructor(private http: HttpClient) { }
+
+  public setRest(rest: Restaurant): void{
+    this.restaurant = rest;
+  }
+
+  public getStoredRest(): Restaurant{
+    return this.restaurant;
+  }
 
   public getRests(): Observable<Restaurant[]> {
     return this.http.get<Restaurant[]>(`${this.restUrl}`, { headers: environment.headers, withCredentials: environment.withCredentials }); 

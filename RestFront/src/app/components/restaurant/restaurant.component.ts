@@ -22,7 +22,8 @@ export class RestaurantComponent implements OnInit {
   cuisine: Cuisine[] = [];
   restConnCuisine: RestConnCuisine[] = [];
   score: Score[] = [];
-  hide: Boolean = true;
+  hide1: Boolean = true;
+  hide2: Boolean = true;
 
   // private cuisineService: CuisineService;
   // private gradeService: GradeService;
@@ -34,14 +35,14 @@ export class RestaurantComponent implements OnInit {
 
   @Input() restInfo!: Restaurant;
 
-  toggleRestDetails(rest: Restaurant): void {
-    if(!this.hide) {
-      this.hide = true;
-    } else {
-      this.hide = false;
-      //get the other details of the 
-      
-    }
+  goDetails(rest: Restaurant): void {
+    this.restService.setRest(rest);
+    this.router.navigate(['details'])
+  }
+
+  goEdit(rest: Restaurant): void {
+    this.restService.setRest(rest);
+    this.router.navigate(['edit'])
   }
 
 
