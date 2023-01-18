@@ -1,4 +1,4 @@
-export class Grade {
+export class Score {
     Id: number
     score: number
     RestId: number

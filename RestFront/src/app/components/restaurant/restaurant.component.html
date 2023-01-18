@@ -1,1 +1,9 @@
-<p>restaurant-component works!</p>
+<div id="element">
+    <span>{{ restInfo.name }}, {{ restInfo.street_addr }}, {{ restInfo.city }}, {{ restInfo.state }}    </span>
+    <button *ngIf="hide" (click)="toggleRestDetails(restInfo)" type="checkbox">Show Restaurant Info</button>
+    <button *ngIf="!hide" (click)="toggleRestDetails(restInfo)" type="checkbox">Hide Restaurant Info</button>
+    <div [hidden]="hide">
+        <!--Here is where we want to add html elements for other details-->
+        <span>This is the id number of the restaurant -- {{restInfo.id}} </span>
+    </div>
+</div>

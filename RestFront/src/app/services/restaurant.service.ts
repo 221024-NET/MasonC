@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments';
+import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Restaurant } from '../models/Restaurant';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +12,11 @@ export class RestaurantService {
 
   constructor(private http: HttpClient) { }
 
-  public getRests(): Observable<any> {
-    return this.http.get(`${this.restUrl}`, { headers: environment.headers, withCredentials: environment.withCredentials }); 
+  public getRests(): Observable<Restaurant[]> {
+    return this.http.get<Restaurant[]>(`${this.restUrl}`, { headers: environment.headers, withCredentials: environment.withCredentials }); 
   }
 
-  public getRest(Id: number): Observable<any> {
-    return this.http.get(`${this.restUrl}/${Id}`, { headers: environment.headers, withCredentials: environment.withCredentials }); 
+  public getRest(Id: number): Observable<Restaurant> {
+    return this.http.get<Restaurant>(`${this.restUrl}/${Id}`, { headers: environment.headers, withCredentials: environment.withCredentials }); 
   }
 }

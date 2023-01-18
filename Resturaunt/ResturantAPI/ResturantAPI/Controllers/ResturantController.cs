@@ -6,11 +6,11 @@ namespace ResturantAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ResturantController : Controller
+    public class RestaurantController : Controller
     {
         private readonly RestContext _context;
 
-        public ResturantController(RestContext context)
+        public RestaurantController(RestContext context)
         {
             this._context = context;
         }

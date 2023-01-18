@@ -44,7 +44,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseCors(ResturantAPI);
+app.UseCors(ResturantAPI);
 
 app.UseHttpsRedirection();
 

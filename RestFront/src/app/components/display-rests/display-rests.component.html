@@ -1,0 +1,11 @@
+<h3>Please select your restaurant.</h3>
+<div>
+    <div>
+       <div *ngFor="let rest of allRests">
+            <app-restaurant-component 
+                class="listItem"
+                [restInfo]="rest"
+            ></app-restaurant-component>
+        </div>
+    </div>
+</div>
