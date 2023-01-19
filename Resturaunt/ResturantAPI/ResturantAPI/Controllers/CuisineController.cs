@@ -27,7 +27,7 @@ namespace ResturantAPI.Controllers
             _context.Cuisines.Add(c);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("PostCuisien", new { id = c.Id }, c);
+            return CreatedAtAction("PostCuisine", new { id = c.Id }, c);
         }
     }
 }

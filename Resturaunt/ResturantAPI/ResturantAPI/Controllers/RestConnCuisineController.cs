@@ -20,6 +20,12 @@ namespace ResturantAPI.Controllers
             return await _context.RestConnCuisines.ToListAsync();
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<IEnumerable<RestConnCuisine>>> GetRestConnCuisine(int id)
+        {
+            return await _context.RestConnCuisines.Where(x => x.RestId == id).ToListAsync();
+        }
+
         [HttpPost]
         public async Task<ActionResult<RestConnCuisine>> PostRestConnCuisine(RestConnCuisine c)
         {

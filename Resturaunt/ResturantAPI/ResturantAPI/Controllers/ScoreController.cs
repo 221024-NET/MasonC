@@ -21,8 +21,14 @@ namespace ResturantAPI.Controllers
             return await _context.Scores.ToListAsync();
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<IEnumerable<Score>>> GetScore(int id)
+        {
+            return await _context.Scores.Where(x => x.RestId == id).ToListAsync();
+        }
+
         [HttpPost]
-        public async Task<ActionResult<Menu>> PostScore(Score c)
+        public async Task<ActionResult<Score>> PostScore(Score c)
         {
             c.Id = null;
             _context.Scores.Add(c);

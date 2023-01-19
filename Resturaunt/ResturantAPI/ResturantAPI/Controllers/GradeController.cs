@@ -20,6 +20,12 @@ namespace ResturantAPI.Controllers
             return await _context.Grades.ToListAsync();
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<IEnumerable<Grade>>> GetGrade(int id)
+        {
+            return await _context.Grades.Where(x => x.RestId == id).ToListAsync();
+        }
+
         [HttpPost]
         public async Task<ActionResult<Grade>> PostGrade(Grade c)
         {
