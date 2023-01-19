@@ -5,6 +5,7 @@ import { GradeService } from 'src/app/services/grade.service';
 import { MenuService } from 'src/app/services/menu.service';
 import { RestConnCuisineService } from 'src/app/services/rest-conn-cuisine.service';
 import { ScoreService } from 'src/app/services/score.service';
+import { Restaurant } from 'src/app/models/Restaurant';
 
 @Component({
   selector: 'app-edit-rest',
@@ -19,6 +20,8 @@ export class EditRestComponent {
   private restConnCuisineService: RestConnCuisineService;
   private scoreService: ScoreService;
 
+  private rest: Restaurant | undefined;
+
   constructor(restService: RestaurantService,
     cuisineService: CuisineService,
     gradeService: GradeService,
@@ -31,6 +34,10 @@ export class EditRestComponent {
     this.menuService = menuService;
     this.restConnCuisineService = restConnCuisineService;
     this.scoreService = scoreService;
+
+    this.rest = this.restService.getStoredRest();
+    // console.log(this.rest); // retrieved successfully
+    
   }
 
   

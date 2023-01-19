@@ -19,5 +19,15 @@ namespace ResturantAPI.Controllers
         {
             return await _context.Grades.ToListAsync();
         }
+
+        [HttpPost]
+        public async Task<ActionResult<Grade>> PostGrade(Grade c)
+        {
+            c.Id = null;
+            _context.Grades.Add(c);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("PostGrade", new { id = c.Id }, c);
+        }
     }
 }

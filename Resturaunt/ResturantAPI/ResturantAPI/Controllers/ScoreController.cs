@@ -20,5 +20,15 @@ namespace ResturantAPI.Controllers
         {
             return await _context.Scores.ToListAsync();
         }
+
+        [HttpPost]
+        public async Task<ActionResult<Menu>> PostScore(Score c)
+        {
+            c.Id = null;
+            _context.Scores.Add(c);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("PostScore", new { id = c.Id }, c);
+        }
     }
 }

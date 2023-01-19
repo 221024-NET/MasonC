@@ -19,5 +19,15 @@ namespace ResturantAPI.Controllers
         {
             return await _context.Menus.ToListAsync();
         }
+
+        [HttpPost]
+        public async Task<ActionResult<Menu>> PostMenu(Menu c)
+        {
+            c.Id = null;
+            _context.Menus.Add(c);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("PostMenu", new { id = c.Id }, c);
+        }
     }
 }
