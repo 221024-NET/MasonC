@@ -13,6 +13,13 @@ DROP TABLE RestConnCuisine;
 DROP TABLE Cuisine;
 DROP TABLE Restaurant;
 
+DELETE FROM RestConnCuisine;
+DELETE FROM Grade;
+DELETE FROM Menu;
+DELETE FROM Score;
+DELETE FROM Cuisine;
+DELETE FROM Restaurant;
+
 
 CREATE TABLE Restaurant(
 	Id INT NOT NULL IDENTITY(1,1),

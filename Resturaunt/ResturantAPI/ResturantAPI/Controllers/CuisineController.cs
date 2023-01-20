@@ -20,6 +20,12 @@ namespace ResturantAPI.Controllers
             return await _context.Cuisines.ToListAsync();
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<IEnumerable<Cuisine>>> GetCuisine(int id)
+        {
+            return await _context.Cuisines.Where(x => x.Id == id).ToListAsync();
+        }
+
         [HttpPost]
         public async Task<ActionResult<Cuisine>> PostCuisine(Cuisine c)
         {
@@ -29,5 +35,6 @@ namespace ResturantAPI.Controllers
 
             return CreatedAtAction("PostCuisine", new { id = c.Id }, c);
         }
+
     }
 }

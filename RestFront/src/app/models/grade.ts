@@ -1,14 +1,14 @@
 export class Grade {
-    Id: number
+    id: number
     grade: number
-    RestId: number
+    restId: number
     constructor (
-        Id: number,
+        id: number,
         grade: number,
-        RestID: number
+        restID: number
     ) {
-        this.Id = Id;
+        this.id = id;
         this.grade = grade;
-        this.RestId = RestID;
+        this.restId = restID;
     }
 }

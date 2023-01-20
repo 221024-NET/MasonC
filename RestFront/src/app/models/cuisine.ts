@@ -1,11 +1,11 @@
 export class Cuisine {
-    Id: number
-    Name: string
+    id: number
+    name: string
     constructor (
-        Id: number,
-        Name: string
+        id: number,
+        name: string
     ) {
-        this.Id = Id;
-        this.Name = Name;
+        this.id = id;
+        this.name = name;
     }
 }

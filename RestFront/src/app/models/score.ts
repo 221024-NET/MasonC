@@ -1,18 +1,18 @@
 export class Score {
-    Id: number
+    id: number
     score: number
-    RestId: number
+    restId: number
     date_submit: Date
 
     constructor (
-        Id: number,
+        id: number,
         score: number,
         date_submit: Date,
-        RestID: number
+        restID: number
     ) {
-        this.Id = Id;
+        this.id = id;
         this.score = score;
         this.date_submit = date_submit;
-        this.RestId = RestID;
+        this.restId = restID;
     }
 }

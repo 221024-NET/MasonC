@@ -1,17 +1,17 @@
 export class RestConnCuisine {
-    Id: number
-    Name: string
-    RestId: number
-    CuisineId: number
+    id: number
+    name: string
+    restId: number
+    cuisineId: number
     constructor (
-        Id: number,
-        Name: string,
-        CuisineId: number,
-        RestId: number
+        id: number,
+        name: string,
+        cuisineId: number,
+        restId: number
     ) {
-        this.Id = Id;
-        this.Name = Name;
-        this.CuisineId = CuisineId;
-        this.RestId = RestId;
+        this.id = id;
+        this.name = name;
+        this.cuisineId = cuisineId;
+        this.restId = restId;
     }
 }

@@ -18,6 +18,7 @@ export class RestaurantService {
   }
 
   public getStoredRest(): Restaurant{
+    //r: Restaurant = new Restaurant(this.restaurant.id, this.restaurant.name, this.restaurant.street_addr, this.restaurant.city, this.restaurant.state);
     return this.restaurant;
   }
 

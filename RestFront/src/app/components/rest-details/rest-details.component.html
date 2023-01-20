@@ -1,1 +1,20 @@
-<p>rest-details works!</p>
+<div>{{ rest.name }}, {{ rest.street_addr }}, {{ rest.city }}, {{ rest.state }}</div>
+<br>
+<br>
+<div> Cuisine </div>
+<app-display-cuisine [restInfo]="rest"></app-display-cuisine>
+<br>
+<br>
+<div> Grade </div>
+<app-display-grade></app-display-grade>
+<br>
+<br>
+<div> Score </div>
+<div *ngFor="let s of score1"> {{ s.score }}</div>
+<br>
+<br>
+<div> Menu </div>
+<app-display-menu></app-display-menu>
+<br>
+<br> 
+<button (click)="home()">Back</button>
