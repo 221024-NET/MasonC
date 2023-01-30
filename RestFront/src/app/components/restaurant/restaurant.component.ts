@@ -59,16 +59,6 @@ export class RestaurantComponent implements OnInit {
         (data) => { 
         this.rests = data; 
       });
-
-      // this.sub1.unsubscribe();
-
-      // this.restConnCuisineService.getRestConnCuisines(this.restInfo.id).subscribe(
-      //   data => {
-      //     this.restConnCuisine = data;
-      //   }
-      // );
-
-      // this.sub1.unsubscribe();
       
     }
 

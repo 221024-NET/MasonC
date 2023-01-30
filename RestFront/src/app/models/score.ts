@@ -8,11 +8,11 @@ export class Score {
         id: number,
         score: number,
         date_submit: Date,
-        restID: number
+        restId: number
     ) {
         this.id = id;
         this.score = score;
         this.date_submit = date_submit;
-        this.restId = restID;
+        this.restId = restId;
     }
 }

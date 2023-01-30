@@ -12,10 +12,6 @@ import { DisplayCuisineComponent } from './components/display-cuisine/display-cu
 import { DisplayGradeComponent } from './components/display-grade/display-grade.component';
 import { DisplayMenuComponent } from './components/display-menu/display-menu.component';
 import { DisplayScoreComponent } from './components/display-score/display-score.component';
-import { CuisineComponent } from './components/cuisine/cuisine.component';
-import { GradeComponent } from './components/grade/grade.component';
-import { ScoreComponent } from './components/score/score.component';
-import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -27,11 +23,7 @@ import { MenuComponent } from './components/menu/menu.component';
     DisplayCuisineComponent,
     DisplayGradeComponent,
     DisplayMenuComponent,
-    DisplayScoreComponent,
-    CuisineComponent,
-    GradeComponent,
-    ScoreComponent,
-    MenuComponent
+    DisplayScoreComponent
   ],
   imports: [
     BrowserModule,

@@ -148,37 +148,37 @@ export class RestDetailsComponent {
     this.router.navigate(['home']);
   }
 
-  // getGrade(restId: number){
-  //   this.gradeService.getGrade(restId).subscribe(
-  //     (data) => {
-  //       this.grade = data;
-  //     }
-  //   );
-  // }
+  getGrade(restId: number){
+    this.gradeService.getGrade(restId).subscribe(
+      (data) => {
+        this.grade1 = data;
+      }
+    );
+  }
 
-  // getMenu(restId: number){
-  //   this.menuService.getMenu(restId).subscribe(
-  //     (data) => {
-  //       this.menu = data;
-  //     }
-  //   );
-  // }
+  getMenu(restId: number){
+    this.menuService.getMenu(restId).subscribe(
+      (data) => {
+        this.menu1 = data;
+      }
+    );
+  }
 
-  // getRestConnCuisine(restId: number): void{
-  //   this.restConnCuisineService.getRestConnCuisines(restId).subscribe(
-  //     (data) => {
-  //       this.restConnCuisine = data;
-  //     }
-  //   );
-  // }
+  getRestConnCuisine(restId: number): void{
+    this.restConnCuisineService.getRestConnCuisines(restId).subscribe(
+      (data) => {
+        this.restConnCuisine = data;
+      }
+    );
+  }
 
-  // getScore(restId: number){
-  //   this.scoreService.getScore(restId).subscribe(
-  //     (data) => {
-  //       this.score = data;
-  //     }
-  //   );
-  // }
+  getScore(restId: number){
+    this.scoreService.getScore(restId).subscribe(
+      (data) => {
+        this.score1 = data;
+      }
+    );
+  }
 
   ngOnDestroy(): void{
     this.sub1.unsubscribe();

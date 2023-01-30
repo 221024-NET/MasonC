@@ -64,12 +64,12 @@ export class DisplayCuisineComponent implements OnInit{
     }
 
   ngOnInit(): void {
-    // this.cuisineService.getCuisines().subscribe(
-    //   (data) => {
-    //     this.cuisine = data;
-    //     console.log(this.cuisine);
-    //   }
-    // )
+    this.cuisineService.getCuisines().subscribe(
+      (data) => {
+        this.cuisine = data;
+        console.log(this.cuisine);
+      }
+    )
     //console.log(this.cuisine);
   }
 

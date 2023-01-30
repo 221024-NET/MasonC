@@ -2,7 +2,7 @@
 <br>
 <br>
 <div> Cuisine </div>
-<app-display-cuisine [restInfo]="rest"></app-display-cuisine>
+<app-display-cuisine></app-display-cuisine>
 <br>
 <br>
 <div> Grade </div>
@@ -10,11 +10,11 @@
 <br>
 <br>
 <div> Score </div>
-<div *ngFor="let s of score1"> {{ s.score }}</div>
+<app-display-score></app-display-score>
 <br>
 <br>
 <div> Menu </div>
-<app-display-menu></app-display-menu>
+<div *ngFor="let m of menu1">Name:{{m.name}} - Price: {{m.price}}</div>
 <br>
 <br> 
 <button (click)="home()">Back</button>
