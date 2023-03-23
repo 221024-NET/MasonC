@@ -1,0 +1,15 @@
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\CodingChallenge-3-23-23\bin\Debug\net7.0\CodingChallenge-3-23-23.exe
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\CodingChallenge-3-23-23\bin\Debug\net7.0\CodingChallenge-3-23-23.deps.json
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\CodingChallenge-3-23-23\bin\Debug\net7.0\CodingChallenge-3-23-23.runtimeconfig.json
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\CodingChallenge-3-23-23\bin\Debug\net7.0\CodingChallenge-3-23-23.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\CodingChallenge-3-23-23\bin\Debug\net7.0\CodingChallenge-3-23-23.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\CodingChallenge-3-23-23\obj\Debug\net7.0\CodingChallenge-3-23-23.csproj.AssemblyReference.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\CodingChallenge-3-23-23\obj\Debug\net7.0\CodingChallenge-3-23-23.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\CodingChallenge-3-23-23\obj\Debug\net7.0\CodingChallenge-3-23-23.AssemblyInfoInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\CodingChallenge-3-23-23\obj\Debug\net7.0\CodingChallenge-3-23-23.AssemblyInfo.cs
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\CodingChallenge-3-23-23\obj\Debug\net7.0\CodingChallenge-3-23-23.csproj.CoreCompileInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\CodingChallenge-3-23-23\obj\Debug\net7.0\CodingChallenge-3-23-23.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\CodingChallenge-3-23-23\obj\Debug\net7.0\refint\CodingChallenge-3-23-23.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\CodingChallenge-3-23-23\obj\Debug\net7.0\CodingChallenge-3-23-23.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\CodingChallenge-3-23-23\obj\Debug\net7.0\CodingChallenge-3-23-23.genruntimeconfig.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\CodingChallenge-3-23-23\obj\Debug\net7.0\ref\CodingChallenge-3-23-23.dll
