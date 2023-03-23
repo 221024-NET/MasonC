@@ -1,0 +1,3 @@
+﻿1,John,Smith,9999999999,Male,30,101 Doe Ln,9999999,General Medicine
+2,Mason,Cathorall,9999999999,Male,25,101 Mine Dr,99999,General Medicine
+3,Funny,Duck,55,Male,50,999 Old McDonald Rd,5676,Orthopedics

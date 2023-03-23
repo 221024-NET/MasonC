@@ -1,0 +1,15 @@
+C:\Users\mpcat\RevatureTraining\MasonC\Interview\letterCounter\obj\Debug\net7.0\letterCounter.csproj.AssemblyReference.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interview\letterCounter\obj\Debug\net7.0\letterCounter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mpcat\RevatureTraining\MasonC\Interview\letterCounter\obj\Debug\net7.0\letterCounter.AssemblyInfoInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interview\letterCounter\obj\Debug\net7.0\letterCounter.AssemblyInfo.cs
+C:\Users\mpcat\RevatureTraining\MasonC\Interview\letterCounter\obj\Debug\net7.0\letterCounter.csproj.CoreCompileInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interview\letterCounter\bin\Debug\net7.0\letterCounter.exe
+C:\Users\mpcat\RevatureTraining\MasonC\Interview\letterCounter\bin\Debug\net7.0\letterCounter.deps.json
+C:\Users\mpcat\RevatureTraining\MasonC\Interview\letterCounter\bin\Debug\net7.0\letterCounter.runtimeconfig.json
+C:\Users\mpcat\RevatureTraining\MasonC\Interview\letterCounter\bin\Debug\net7.0\letterCounter.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Interview\letterCounter\bin\Debug\net7.0\letterCounter.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\Interview\letterCounter\obj\Debug\net7.0\letterCounter.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Interview\letterCounter\obj\Debug\net7.0\refint\letterCounter.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Interview\letterCounter\obj\Debug\net7.0\letterCounter.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\Interview\letterCounter\obj\Debug\net7.0\letterCounter.genruntimeconfig.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interview\letterCounter\obj\Debug\net7.0\ref\letterCounter.dll

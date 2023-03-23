@@ -1,0 +1,15 @@
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\Interview\Interview\bin\Debug\net7.0\Interview.exe
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\Interview\Interview\bin\Debug\net7.0\Interview.deps.json
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\Interview\Interview\bin\Debug\net7.0\Interview.runtimeconfig.json
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\Interview\Interview\bin\Debug\net7.0\Interview.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\Interview\Interview\bin\Debug\net7.0\Interview.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\Interview\Interview\obj\Debug\net7.0\Interview.csproj.AssemblyReference.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\Interview\Interview\obj\Debug\net7.0\Interview.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\Interview\Interview\obj\Debug\net7.0\Interview.AssemblyInfoInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\Interview\Interview\obj\Debug\net7.0\Interview.AssemblyInfo.cs
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\Interview\Interview\obj\Debug\net7.0\Interview.csproj.CoreCompileInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\Interview\Interview\obj\Debug\net7.0\Interview.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\Interview\Interview\obj\Debug\net7.0\refint\Interview.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\Interview\Interview\obj\Debug\net7.0\Interview.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\Interview\Interview\obj\Debug\net7.0\Interview.genruntimeconfig.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\Interview\Interview\obj\Debug\net7.0\ref\Interview.dll

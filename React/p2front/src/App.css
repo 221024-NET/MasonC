@@ -1,0 +1,41 @@
+div#box{
+  /* display: flex; */
+  justify-content: center;
+  text-align: center;
+  background-color: #FFFFFF;
+  padding: 40px;
+  border-radius: 13px;
+  width: 60%;
+  margin: auto;
+}
+
+button {
+  background-color: #FF6600;
+  color: #FFFFFF;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+  border-radius: 30px;
+}
+
+input[type=text], input[type=password] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+div#card{
+  width:250px;
+  padding-top:5px;
+  border-style:solid;
+  border-color:black;
+  /* border-width:1px;
+  padding-left:3px; */
+  padding-bottom: 10px; 
+}

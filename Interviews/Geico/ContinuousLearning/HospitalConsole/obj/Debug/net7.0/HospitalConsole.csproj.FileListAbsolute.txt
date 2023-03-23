@@ -1,0 +1,15 @@
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\ContinuousLearning\HospitalConsole\obj\Debug\net7.0\HospitalConsole.csproj.AssemblyReference.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\ContinuousLearning\HospitalConsole\obj\Debug\net7.0\HospitalConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\ContinuousLearning\HospitalConsole\obj\Debug\net7.0\HospitalConsole.AssemblyInfoInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\ContinuousLearning\HospitalConsole\obj\Debug\net7.0\HospitalConsole.AssemblyInfo.cs
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\ContinuousLearning\HospitalConsole\obj\Debug\net7.0\HospitalConsole.csproj.CoreCompileInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\ContinuousLearning\HospitalConsole\bin\Debug\net7.0\HospitalConsole.exe
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\ContinuousLearning\HospitalConsole\bin\Debug\net7.0\HospitalConsole.deps.json
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\ContinuousLearning\HospitalConsole\bin\Debug\net7.0\HospitalConsole.runtimeconfig.json
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\ContinuousLearning\HospitalConsole\bin\Debug\net7.0\HospitalConsole.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\ContinuousLearning\HospitalConsole\bin\Debug\net7.0\HospitalConsole.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\ContinuousLearning\HospitalConsole\obj\Debug\net7.0\HospitalConsole.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\ContinuousLearning\HospitalConsole\obj\Debug\net7.0\refint\HospitalConsole.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\ContinuousLearning\HospitalConsole\obj\Debug\net7.0\HospitalConsole.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\ContinuousLearning\HospitalConsole\obj\Debug\net7.0\HospitalConsole.genruntimeconfig.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\ContinuousLearning\HospitalConsole\obj\Debug\net7.0\ref\HospitalConsole.dll

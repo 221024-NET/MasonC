@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "test": "testcafe --ports 3000,4200 --skip-js-errors chrome tests/*.js"
+  },
+  "dependencies": {
+    "testcafe": "^2.3.1",
+    "testcafe-angular-selectors": "^0.4.1",
+    "testcafe-react-selectors": "^5.0.2"
+  }
+}

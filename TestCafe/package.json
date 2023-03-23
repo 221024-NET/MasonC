@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "test": "testcafe chrome tests/*.js --skip-js-errors"
+  },
+  "dependencies": {
+    "testcafe": "^2.3.1"
+  }
+}

@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Interviews",
+    "\\Interviews\\Geico"
   ],
-  "SelectedNode": "\\TicketingApp.sln",
+  "SelectedNode": "\\Interviews\\Geico\\ContinuousLearning",
   "PreviewInSolutionExplorer": false
 }
