@@ -8,7 +8,7 @@ namespace Interview
         {
             //Console.WriteLine("Hello World!");
             LetterOccurance l = new LetterOccurance();
-            l.occurances("Hello World");
+            l.occurances("Hello World!");
 
             //Calculator c = new Calculator();
             //c.calculation();

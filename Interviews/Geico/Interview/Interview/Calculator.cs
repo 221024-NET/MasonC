@@ -56,7 +56,6 @@ namespace Interview
                     Console.Write($"Answer for {a} / {b} = ");
                     Console.WriteLine(a / b);
                     break;
-
             }
         }
     }

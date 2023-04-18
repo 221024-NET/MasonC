@@ -1,0 +1,15 @@
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\4-17-23\bin\Debug\net7.0\4-17-23.exe
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\4-17-23\bin\Debug\net7.0\4-17-23.deps.json
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\4-17-23\bin\Debug\net7.0\4-17-23.runtimeconfig.json
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\4-17-23\bin\Debug\net7.0\4-17-23.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\4-17-23\bin\Debug\net7.0\4-17-23.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\4-17-23\obj\Debug\net7.0\4-17-23.csproj.AssemblyReference.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\4-17-23\obj\Debug\net7.0\4-17-23.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\4-17-23\obj\Debug\net7.0\4-17-23.AssemblyInfoInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\4-17-23\obj\Debug\net7.0\4-17-23.AssemblyInfo.cs
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\4-17-23\obj\Debug\net7.0\4-17-23.csproj.CoreCompileInputs.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\4-17-23\obj\Debug\net7.0\4-17-23.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\4-17-23\obj\Debug\net7.0\refint\4-17-23.dll
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\4-17-23\obj\Debug\net7.0\4-17-23.pdb
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\4-17-23\obj\Debug\net7.0\4-17-23.genruntimeconfig.cache
+C:\Users\mpcat\RevatureTraining\MasonC\Interviews\Geico\4-17-23\obj\Debug\net7.0\ref\4-17-23.dll
